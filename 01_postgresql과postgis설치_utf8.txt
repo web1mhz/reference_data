@@ -1,0 +1,29 @@
+﻿1. postgresql 설치
+- postgresql 다운로드
+  (https://www.postgresql.org/)
+
+- 다운받은 postgresql 설치파일 실행
+
+- 설치 중 사용자이름과 비밀번호를 입력하는 단계에서 
+- 사용자이름은 postgres로 이미 생성되고
+- 비밀번호만 알아서 생성한다.
+
+- postgresql 설치 마지막 단계에서 
+  application stack builder 설치를 묻는 단계에서
+  postgis bundle 3 for postgresql x64 를 선택하여 
+  postgis 설치를 완료한다.    
+  
+2. postgresql에 공간DB 생성
+
+- postgresql를 실행하기 위해 pgAdmin 4를 실행
+- 비밀번호를 요구하는데 설치 중에 생성한 비밀번호 입력
+- 공간DB를 생성하기 위해 우선 
+  postgres 데이터베이스를 선택하고 오른쪽 클릭한 후
+  새로운 데이터베이스를 gis_sdb 이름으로 생성한다.
+- 생성된 gis_sdb 공간db를 선택하고 오른쪽 클릭한 후
+  쿼리 툴를 실행한다.
+- 쿼리 창에서 create extension postgis를 입력하고 쿼리를 실행하면
+  GIS자료를 관리할 수 있는 공간DB가 최종적으로 생성된다. 
+
+
+3. QGIS에서 postgresql 공간DB 연결
